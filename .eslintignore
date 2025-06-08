@@ -1,4 +1,4 @@
-# ігнорувати всі готові JSX/TSX-файли, крім тих, що під src/app та src/pages
+# ігнорувати всі готові JSX/TSX-файли, крім тих, що під src/app
 src/assets/**
 src/screens/**
 src/data/**
@@ -6,5 +6,3 @@ src/utils/**
 src/index.js
 src/App.jsx
 src/routes/**
-src/pages/_app.tsx
-src/pages/ssr.js

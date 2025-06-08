@@ -1,6 +1,6 @@
 # Art & Culture
 
-This project uses **Next.js** for server-side rendering (SSR).
+This project uses **Next.js** with the App Router for server-side rendering (SSR).
 
 The codebase is tested with **Node.js 18.x**. If you use `nvm`, run `nvm use` in
 the project directory to ensure the correct version.
@@ -114,7 +114,7 @@ The middleware in [`middleware.ts`](middleware.ts) now detects the locale from t
 URL. Requests without a locale prefix are redirected to `/uk` by default and an
 `X-Art-Culture` header is added to all responses.
 
-A demo SSR page is available at [`src/pages/ssr.js`](src/pages/ssr.js) which uses `getServerSideProps` to select a random news item on each request.
+A demo SSR page is available at [`src/app/ssr/page.tsx`](src/app/ssr/page.tsx) which renders on every request using the App Router.
 
 ## Static Regeneration
 
