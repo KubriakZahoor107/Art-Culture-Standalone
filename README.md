@@ -114,6 +114,11 @@ The middleware in [`middleware.ts`](middleware.ts) now detects the locale from t
 URL. Requests without a locale prefix are redirected to `/uk` by default and an
 `X-Art-Culture` header is added to all responses.
 
+### Supported Locales
+
+Pages are available in Ukrainian (`uk`) and English (`en`). These locales are
+pre-rendered at build time.
+
 A demo SSR page is available at [`src/pages/ssr.js`](src/pages/ssr.js) which uses `getServerSideProps` to select a random news item on each request.
 
 ## Static Regeneration
