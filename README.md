@@ -108,13 +108,18 @@ npm run test:watch
 
 SEO metadata is defined in [`src/meta/index.js`](src/meta/index.js).
 
+## Supported Locales
+
+Pages are available in Ukrainian (`uk`) and English (`en`). These locales are
+pre-rendered at build time.
+
+A demo SSR page is available at [`src/app/ssr/page.tsx`](src/app/ssr/page.tsx) which renders on every request using the App Router.
+
 ## Middleware and SSR
 
 The middleware in [`middleware.ts`](middleware.ts) now detects the locale from the
 URL. Requests without a locale prefix are redirected to `/uk` by default and an
 `X-Art-Culture` header is added to all responses.
-
-A demo SSR page is available at [`src/app/ssr/page.tsx`](src/app/ssr/page.tsx) which renders on every request using the App Router.
 
 ## Static Regeneration
 
