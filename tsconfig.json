@@ -9,7 +9,6 @@
       "esnext"
     ], // Підтримка браузерних API + сучасного JS
     "allowJs": true,
-    "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -22,10 +21,9 @@
     "typeRoots": ["src/types", "node_modules/@types"],
     "jsx": "preserve", // або "react-jsx" (Next.js автоматично «переведе» JSX)
     "types": [
-      "node",
-      "react",
-      "next"
-    ], // Підключаємо типи Node, React і Next.js
+      "next",
+      "node"
+    ], // Підключаємо типи Next.js та Node
     // Якщо вам потрібні шляхи (aliases) — залиште, але переконайтеся, що baseUrl кореневий
     "baseUrl": ".",
     "paths": {
@@ -46,12 +44,9 @@
     ]
   },
   "include": [
-    "**/*.ts", // обов’язково Next.js генерує
-    "**/*.tsx",
     "next-env.d.ts",
-    "src/**/*" // уключаємо всю папку src
-    ,
-    ".next/types/**/*.ts"
+    "middleware.ts",
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
