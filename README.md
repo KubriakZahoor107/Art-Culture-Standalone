@@ -105,7 +105,7 @@ To continually run tests as files change, use watch mode:
 npm run test:watch
 ```
 
-For more verbose output and handle detection, run the debug command:
+If tests hang, run the debug command to detect open handles:
 
 ```bash
 npm run test:debug
