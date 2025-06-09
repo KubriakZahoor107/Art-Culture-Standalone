@@ -1,42 +1,33 @@
 {
-  // Ім’я файлу: tsconfig.json
   "compilerOptions": {
-    "skipLibCheck": true,
-    "target": "esnext", // Використовуємо сучасний ESNext
+    "target": "es2017",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
-    ], // Підтримка браузерних API + сучасного JS
+    ],
     "allowJs": true,
+    "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext", // ES-модулі
-    "moduleResolution": "node16", // Новий алгоритм резолвінгу модулів
-    "resolveJsonModule": true,
-    "isolatedModules": true,
     "incremental": true,
-    "typeRoots": ["src/types", "node_modules/@types"],
-    "jsx": "preserve", // або "react-jsx" (Next.js автоматично «переведе» JSX)
-    "types": [
-      "next",
-      "node"
-    ], // Підключаємо типи Next.js та Node
-    // Якщо вам потрібні шляхи (aliases) — залиште, але переконайтеся, що baseUrl кореневий
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "module": "esnext",
     "baseUrl": ".",
     "paths": {
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/data/*": [
-        "src/data/*"
-      ],
       "@/*": [
         "src/*"
       ]
     },
+    "typeRoots": [
+      "src/types",
+      "node_modules/@types"
+    ],
+    "resolveJsonModule": true,
     "plugins": [
       {
         "name": "next"
@@ -44,14 +35,12 @@
     ]
   },
   "include": [
-    "next-env.d.ts",
     "middleware.ts",
-    "src/**/*"
+    "next-env.d.ts",
+    "src/**/*",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "dist",
-    ".next",
-    "out"
+    "node_modules"
   ]
 }
