@@ -1,5 +1,5 @@
-@use '/src/styles/components/UserProfile/userProfile.module.scss';
-@import '/src/styles/utilities/variables.scss';
+@use '/src/styles/components/UserProfile/userProfile.module.scss' as *;
+@use '/src/styles/utilities/variables.scss' as * as *;
 
 .userProfilePostsWrapper {
 	/* Контейнер для карточек публикаций */

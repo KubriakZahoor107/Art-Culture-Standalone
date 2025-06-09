@@ -1,4 +1,4 @@
-@import "../utilities/variables.scss";
+@use '../utilities/variables.scss' as *;
 
 .newsPageContainer {
   /* Основной контейнер страницы новостей */
@@ -69,7 +69,7 @@
 //   /* Контейнер для кнопок лайка и шаринга */
 //   display: flex;
 //   flex-direction: row;
-//   justify-content: end;
+//   justify-content: flex-end;
 //   align-items: center;
 //   margin: calc(31px - (-15 * ((1440px - 100vw) / (1440 - 375)))) $responsiveLeftAndRightPadding 0;
 //   font-size: 18px;

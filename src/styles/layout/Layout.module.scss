@@ -1,5 +1,5 @@
-@use '../base/reset.scss';
-@use '../utilities/variables';
+@use '../base/reset.scss' as *;
+@use '../utilities/variables' as *;
 
 .container {
     width: 100%;

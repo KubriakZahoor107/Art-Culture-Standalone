@@ -1,5 +1,5 @@
-@use "@styles/layout/ArtistsPage.module.scss";
-@use "@styles/utilities/variables.scss";
+@use "@styles/layout/ArtistsPage.module.scss" as *;
+@use "@styles/utilities/variables.scss" as *;
 
 .ArtistsContainer {
   // Контейнер для артистов

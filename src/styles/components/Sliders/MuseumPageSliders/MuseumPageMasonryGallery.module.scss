@@ -1,4 +1,4 @@
-@import '/src/styles/utilities/variables.scss';
+@use '/src/styles/utilities/variables.scss' as *;
 
 // .masonryGallery {
 // 	width: 100%;
@@ -77,7 +77,7 @@
 	// Обертка кнопки "Показать больше"
 	display: flex;
 	align-items: center;
-	justify-content: end;
+	justify-content: flex-end;
 	width: 100%;
 }
 

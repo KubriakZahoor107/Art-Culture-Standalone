@@ -1,6 +1,6 @@
 /* PageMasonryGallery.module.scss */
 
-@import "../../../utilities/variables.scss";
+@use '../../../utilities/variables.scss' as *;
 
 .galleryContainer {
   margin: 0;
