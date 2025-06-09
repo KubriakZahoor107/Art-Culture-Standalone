@@ -15,7 +15,7 @@
     "test": "jest --runInBand",
     "sitemap": "next-sitemap",
     "test:watch": "jest --watch",
-    "test:debug": "jest --runInBand --detectOpenHandles --verbose"
+    "test:debug": "jest --runInBand --detectOpenHandles"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.80.6",
