@@ -10,6 +10,7 @@ describe('getBaseUrl', () => {
   afterEach(() => {
     delete (global as any).window
     delete process.env.API_BASE_URL
+    jest.useRealTimers()
   })
 
   describe('browser scenario', () => {

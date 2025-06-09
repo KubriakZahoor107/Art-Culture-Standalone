@@ -104,6 +104,15 @@ To continually run tests as files change, use watch mode:
 npm run test:watch
 ```
 
+If you enable fake timers in a test with `jest.useFakeTimers()`, be sure to
+reset them afterwards:
+
+```ts
+afterEach(() => {
+  jest.useRealTimers();
+});
+```
+
 ## SEO
 
 SEO metadata is defined in [`src/meta/index.js`](src/meta/index.js).

@@ -1,6 +1,10 @@
 import { getRandomNewsProps } from '../src/utils/serverProps.js'
 import { newsList } from '../src/data/news.js'
 
+afterEach(() => {
+  jest.useRealTimers()
+})
+
 test('getServerSideProps returns a news item and timestamp', async () => {
   const { props } = await getRandomNewsProps()
   expect(props.randomNews).toBeDefined()

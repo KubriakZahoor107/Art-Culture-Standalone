@@ -11,6 +11,10 @@ describe('helper utilities', () => {
     process.env.API_BASE_URL = 'http://localhost:5000';
   });
 
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
   describe('getImageUrl', () => {
     test('returns default image when no path provided', () => {
       expect(getImageUrl()).toBe('/img/placeholder.jpg');

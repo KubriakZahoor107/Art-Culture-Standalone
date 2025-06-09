@@ -14,6 +14,7 @@ describe('generateStaticParams', () => {
   afterEach(() => {
     process.env = originalEnv
     ;(global.fetch as unknown as jest.Mock).mockReset()
+    jest.useRealTimers()
   })
 
   test('returns params when API_BASE_URL is provided', async () => {

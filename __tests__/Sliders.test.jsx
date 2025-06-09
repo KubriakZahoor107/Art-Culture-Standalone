@@ -20,6 +20,9 @@ jest.mock('swiper/css/navigation', () => ({}))
 jest.mock('swiper/css/pagination', () => ({}))
 
 describe('Slider slides navigation', () => {
+  afterEach(() => {
+    jest.useRealTimers()
+  })
   test('artist slide navigates on click', () => {
     const navigate = jest.fn()
     useNavigate.mockReturnValue(navigate)

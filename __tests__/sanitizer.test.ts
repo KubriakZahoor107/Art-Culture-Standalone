@@ -4,6 +4,10 @@ const window = new JSDOM('').window
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const DOMPurify = createDOMPurify(window as any)
 
+afterEach(() => {
+  jest.useRealTimers()
+})
+
 /** Basic sanitization check */
 test('unsafe HTML is sanitized', () => {
   const dirty = '<img src=x onerror=alert(1)><script>alert(1)</script><p>hi</p>'
