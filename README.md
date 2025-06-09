@@ -2,8 +2,9 @@
 
 This project uses **Next.js** for server-side rendering (SSR).
 
-The codebase is tested with **Node.js 18.x**. If you use `nvm`, run `nvm use` in
-the project directory to ensure the correct version.
+The codebase is tested with **Node.js 18**. Run `nvm use` in the project
+directory to switch to this version. A `.nvmrc` file is included for
+convenience.
 
 ## Getting Started
 
