@@ -8,25 +8,20 @@ const window = new JSDOM('').window
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const DOMPurify = createDOMPurify(window as any)
 import { NewsItem } from '@/data/news'
+import { getApiBaseUrl } from '@/utils/getApiBaseUrl'
 
 // Incremental static regeneration
 export const revalidate = 60
 
 export async function generateStaticParams() {
-  const baseUrl =
-    process.env.NODE_ENV === 'production'
-      ? process.env.NEXT_PUBLIC_API_BASE_URL
-      : 'http://localhost:3000'
+  const baseUrl = getApiBaseUrl()
   const res = await fetch(`${baseUrl}/api/news`)
   const newsList: NewsItem[] = await res.json()
   return newsList.map((n) => ({ id: n.id }))
 }
 
 export async function generateMetadata({ params }: PageProps<{ id: string }>) {
-  const baseUrl =
-    process.env.NODE_ENV === 'production'
-      ? process.env.NEXT_PUBLIC_API_BASE_URL
-      : 'http://localhost:3000'
+  const baseUrl = getApiBaseUrl()
   const res = await fetch(`${baseUrl}/api/news`)
   const newsList: NewsItem[] = await res.json()
   const news = newsList.find((n) => n.id === params.id)
@@ -46,10 +41,7 @@ export async function generateMetadata({ params }: PageProps<{ id: string }>) {
 }
 
 export default async function NewsPage({ params }: PageProps<{ id: string }>) {
-  const baseUrl =
-    process.env.NODE_ENV === 'production'
-      ? process.env.NEXT_PUBLIC_API_BASE_URL
-      : 'http://localhost:3000'
+  const baseUrl = getApiBaseUrl()
   const res = await fetch(`${baseUrl}/api/news`)
   const newsList: NewsItem[] = await res.json()
   const news = newsList.find((n) => n.id === params.id) as NewsItem

@@ -2,12 +2,13 @@
 
 import Link from 'next/link'
 import { NewsItem } from '@/data/news'
+import { getApiBaseUrl } from '@/utils/getApiBaseUrl'
 
 export const revalidate = 60  // ISR: рефреш раз на 60 секунд
 
 export default async function NewsIndex() {
   // Визначаємо базовий URL один раз
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'
+  const baseUrl = getApiBaseUrl()
 
   // Виконуємо запит із кешуванням ISR
   const res = await fetch(`${baseUrl}/api/news`, { next: { revalidate } })
