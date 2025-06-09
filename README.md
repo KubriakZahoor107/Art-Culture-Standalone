@@ -46,6 +46,14 @@ Copy `.env.sample` to `.env` and update the values as needed.
 - `TOKEN` - access token for internal APIs
 - `NEXT_PUBLIC_API_URL` is no longer used and can be removed
 
+### Environment
+
+Ensure `.env.local` contains:
+```
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+```
+before running `npm run build`. This variable defines the base URL used by server components to access internal API routes (see `.env.sample` for defaults).
+
 ## NextAuth
 
 Ensure the environment variables above are set. Start the development server and open `/api/auth/signin` to test authentication.
