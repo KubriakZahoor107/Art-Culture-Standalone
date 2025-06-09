@@ -104,6 +104,12 @@ To continually run tests as files change, use watch mode:
 npm run test:watch
 ```
 
+For more verbose output and handle detection, run the debug command:
+
+```bash
+npm run test:debug
+```
+
 ## SEO
 
 SEO metadata is defined in [`src/meta/index.js`](src/meta/index.js).
