@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-export {};
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-// @ts-nocheck
-=======
 import { ReactNode } from 'react'
 
 interface LocaleLayoutProps {
@@ -17,4 +12,3 @@ export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
     </html>
   )
 }
->>>>>>> origin/main
