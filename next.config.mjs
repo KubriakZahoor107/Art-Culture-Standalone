@@ -1,5 +1,11 @@
 import path from 'path';
 
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000';
+
+if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_API_BASE_URL) {
+  throw new Error('NEXT_PUBLIC_API_BASE_URL must be defined during build');
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -10,7 +16,7 @@ const nextConfig = {
     return config;
   },
   env: {
-    NEXT_PUBLIC_API_BASE_URL: process.env.NEXT_PUBLIC_API_BASE_URL,
+    NEXT_PUBLIC_API_BASE_URL: apiBaseUrl,
   },
 };
 

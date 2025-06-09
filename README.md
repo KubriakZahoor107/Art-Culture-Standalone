@@ -40,7 +40,7 @@ Copy `.env.sample` to `.env` and update the values as needed.
 - `SHOPIFY_API_KEY` and `SHOPIFY_API_SECRET`
 - `NEXTAUTH_SECRET` and provider credentials like `GITHUB_ID`/`GITHUB_SECRET`
 - `NEXT_PUBLIC_HOST` – hostname used when rendering on the server
-- `NEXT_PUBLIC_API_BASE_URL` – base URL used by server components to fetch internal API routes
+- `NEXT_PUBLIC_API_BASE_URL` – base URL used by server components to fetch internal API routes. This must be set for production builds and defaults to `http://localhost:3000` during development
 - `API_BASE_URL` - fallback base URL for server-side API utilities
 - `TOKEN` - access token for internal APIs
 - `NEXT_PUBLIC_API_URL` is no longer used and can be removed
