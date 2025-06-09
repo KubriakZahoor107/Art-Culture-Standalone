@@ -1,4 +1,4 @@
-@import "/src/styles/utilities/variables.scss";
+@use '/src/styles/utilities/variables.scss' as *;
 
 body {
   font-family: $CenturyGothic, $CormorantSCRegular, $chiller-font, $default-font;
@@ -34,7 +34,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: flex-end;
 
   &__img {
     width: calc(122.47 / 1440 * 100vw);
@@ -50,7 +50,7 @@ body {
     margin: 0 0 calc(-3 / 1440 * 100vw) 0;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: start;
     width: auto;
   }
@@ -310,7 +310,7 @@ body {
   padding: $responsiveSmallPadding 0;
   flex-direction: column;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .likeButtonTitle {

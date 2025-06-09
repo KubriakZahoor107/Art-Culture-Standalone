@@ -1,21 +1,21 @@
 // Base
-@import 'base/global';
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/colors';
+@use 'base/global' as *;
+@use 'base/reset' as *;
+@use 'base/typography' as *;
+@use 'base/colors' as *;
 
 // Layout
-@import 'layout/Header.module.scss';
-@import 'layout/Footer.module.scss';
+@use 'layout/Header.module.scss' as *;
+@use 'layout/Footer.module.scss' as *;
 // @import 'layout/navigation';
 
 // Components
-@import 'components/buttons';
-@import 'components/forms';
+@use 'components/buttons' as *;
+@use 'components/forms' as *;
 // @import 'components/cards';
 // @import 'components/modals';
 
 // Utils
-@import 'utilities/variables';
+@use 'utilities/variables' as *;
 // @import 'utils/mixins';
 // @import 'utils/functions';

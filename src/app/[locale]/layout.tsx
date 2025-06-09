@@ -1,4 +1,3 @@
-import { ReactNode } from 'react'
 import type { LayoutProps } from 'next'
 
 export default function LocaleLayout(

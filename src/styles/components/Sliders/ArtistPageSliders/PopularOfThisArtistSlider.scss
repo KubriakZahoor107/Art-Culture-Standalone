@@ -1,4 +1,4 @@
-@import '/src/styles/utilities/variables.scss';
+@use '/src/styles/utilities/variables.scss' as *;
 
 .popularOfThisArtistSliderContainer {
     // Контейнер слайдера

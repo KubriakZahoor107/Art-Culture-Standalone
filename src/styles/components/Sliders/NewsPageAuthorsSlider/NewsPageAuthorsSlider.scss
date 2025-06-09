@@ -1,5 +1,5 @@
-@use '/node_modules/swiper/swiper-vars.scss';
-@import '/src/styles/utilities/variables.scss';
+@use '/node_modules/swiper/swiper-vars.scss' as *;
+@use '/src/styles/utilities/variables.scss' as * as *;
 
 .newsPageAuthorsSliderCardContainer {
 	/* Контейнер для карточки слайдера авторов */

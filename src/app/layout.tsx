@@ -1,6 +1,5 @@
 // Файл: /src/app/layout.tsx
 
-import type { ReactNode } from 'react'
 import Script from 'next/script'
 import localFont from 'next/font/local'
 
@@ -25,11 +24,11 @@ export const metadata = {
   description: 'Культура, мистецтво та новини від Art Play Ukraine',
 }
 
-interface RootLayoutProps {
-  children: ReactNode
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID
   const isProd = process.env.NODE_ENV === 'production'
 

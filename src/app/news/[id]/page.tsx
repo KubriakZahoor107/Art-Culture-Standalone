@@ -1,6 +1,7 @@
 // src/app/news/[id]/page.tsx
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import type { PageProps } from 'next'
 import createDOMPurify from 'dompurify'
 import { JSDOM } from 'jsdom'
 const window = new JSDOM('').window
@@ -10,10 +11,6 @@ import { NewsItem } from '@/data/news'
 
 // Incremental static regeneration
 export const revalidate = 60
-
-interface Props {
-  params: { id: string }
-}
 
 export async function generateStaticParams() {
   const baseUrl =
@@ -25,7 +22,7 @@ export async function generateStaticParams() {
   return newsList.map((n) => ({ id: n.id }))
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: PageProps<{ id: string }>) {
   const baseUrl =
     process.env.NODE_ENV === 'production'
       ? process.env.NEXT_PUBLIC_API_BASE_URL
@@ -48,7 +45,7 @@ export async function generateMetadata({ params }: Props) {
   }
 }
 
-export default async function NewsPage({ params }: Props) {
+export default async function NewsPage({ params }: PageProps<{ id: string }>) {
   const baseUrl =
     process.env.NODE_ENV === 'production'
       ? process.env.NEXT_PUBLIC_API_BASE_URL

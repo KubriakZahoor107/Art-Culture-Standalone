@@ -1,4 +1,4 @@
-@import '/src/styles/utilities/variables.scss';
+@use '/src/styles/utilities/variables.scss' as *;
 
 .mainInstagramSliderContainer {
     // Основной контейнер слайдера
@@ -209,7 +209,7 @@
 .mainInstagramSliderCardBottomInnerWrapper {
     // Внутренний нижний контейнер карточки
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     background: #1A1A1A;
     border-radius: 0 0 6px 6px;
     padding: $responsiveMediumPadding;
