@@ -2,5 +2,5 @@ export {
   default,
   generateMetadata,
   generateStaticParams,
-} from '../../../../news/[id]/page'
+} from '@/app/news/[id]/page'
 export const revalidate = 60
