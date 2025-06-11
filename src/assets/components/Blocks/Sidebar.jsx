@@ -2,14 +2,14 @@ import styles from '@styles/components/Blocks/Sidebar.module.scss'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../Context/AuthContext.jsx'
-import { getUserRole } from '../../../utils/constants'
+import { useUserRole } from '../../../utils/constants'
 
 function Sidebar() {
 	const { t } = useTranslation()
 	const navigate = useNavigate()
 	const { logout } = useAuth()
-	const { isAdmin, isAuthor, isCreator, isEditor, isExhibition, isMuseum } =
-		getUserRole()
+       const { isAdmin, isAuthor, isCreator, isEditor, isExhibition, isMuseum } =
+               useUserRole()
 
 	const handleProfilePageClick = () => {
 		navigate('/profile')

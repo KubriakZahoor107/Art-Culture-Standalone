@@ -2,7 +2,7 @@ import style from '@styles/components/Blocks/ModalWindow.module.scss'
 import PropTypes from 'prop-types'
 import { useCallback, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { getUserRole } from '../../../utils/constants'
+import { useUserRole } from '../../../utils/constants'
 import { getImageUrl } from '../../../utils/helper'
 import TranslatedContent from '../Blocks/TranslatedContent'
 import LikeAndShare from './LikeAndShare'
@@ -20,9 +20,9 @@ const GalleryModal = ({
 	baseUrl,
 	preloading,
 }) => {
-	const { t } = useTranslation()
-	const modalRef = useRef(null)
-	const { isMuseum } = getUserRole()
+        const { t } = useTranslation()
+        const modalRef = useRef(null)
+        const { isMuseum } = useUserRole()
 
 	useEffect(() => {
 		if (isOpen && modalRef.current) {
