@@ -41,7 +41,7 @@ Copy `.env.sample` to `.env` and update the values as needed.
 - `SHOPIFY_API_KEY` and `SHOPIFY_API_SECRET`
 - `NEXTAUTH_SECRET` and provider credentials like `GITHUB_ID`/`GITHUB_SECRET`
 - `NEXT_PUBLIC_HOST` – hostname used when rendering on the server
-- `NEXT_PUBLIC_API_BASE_URL` – base URL used by server components to fetch internal API routes. This must be set for production builds and defaults to `http://localhost:3000` during development
+- `NEXT_PUBLIC_API_BASE_URL` – base URL used by server components to fetch internal API routes. This must be set for production builds and defaults to `http://localhost:3000` during development. [`next.config.mjs`](next.config.mjs) checks for this variable and throws an error when it is missing.
 - `API_BASE_URL` - fallback base URL for server-side API utilities
 - `TOKEN` - access token for internal APIs
 - `NEXT_PUBLIC_API_URL` is no longer used and can be removed
@@ -53,6 +53,7 @@ Ensure `.env.local` contains:
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
 ```
 before running `npm run build`. This variable defines the base URL used by server components to access internal API routes (see `.env.sample` for defaults).
+The build script fails if `NEXT_PUBLIC_API_BASE_URL` is not set because [`next.config.mjs`](next.config.mjs) enforces its presence.
 
 ## NextAuth
 
