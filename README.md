@@ -66,6 +66,17 @@ Run the development server:
 npm run dev
 ```
 
+
+## Linting
+
+Run ESLint to check code style:
+
+```bash
+npm run lint
+```
+
+The ESLint rules are configured in `.eslintrc.json`.
+
 ## Production
 
 Build and start the production server:
