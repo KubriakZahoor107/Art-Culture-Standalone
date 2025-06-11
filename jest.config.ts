@@ -3,7 +3,7 @@ import type { Config } from 'jest'
 const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  extensionsToTreatAsEsm: ['.ts', '.tsx', '.js', '.jsx'],
+  extensionsToTreatAsEsm: ['.ts', '.tsx', '.jsx'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
@@ -16,7 +16,7 @@ const config: Config = {
     '^.+\\.(js|jsx)$': 'babel-jest',
   },
   testPathIgnorePatterns: ['/node_modules/', '/.next/', '/dist/'],
-  transformIgnorePatterns: ['/node_modules/(?!(some-esm-package)/)'],
+  transformIgnorePatterns: ['/node_modules/'],
 }
 
 export default config
