@@ -1,10 +1,11 @@
-iimport type { Config } from 'jest'
+import 'ts-node/register'
+import type { Config } from 'jest'
 
 const config: Config = {
     transform: {
         '^.+\\.[tj]sx?$': 'babel-jest',
     },
-    extensionsToTreatAsEsm: ['.ts', 'tsx', 'jsx'],
+    extensionsToTreatAsEsm: ['.ts', '.tsx', '.jsx'],
     setupFiles: ['<rootDir>/jest.setup.cjs'],
     testEnvironment: 'jsdom',
     moduleNameMapper: {
