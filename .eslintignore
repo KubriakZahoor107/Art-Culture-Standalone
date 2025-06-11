@@ -1,8 +1,4 @@
-# ігнорувати всі готові JSX/TSX-файли, крім тих, що під src/app та src/pages
-src/assets/**
-src/screens/**
-src/data/**
-src/utils/**
+# Ignore generated entry files that don't require linting
 src/index.js
 src/App.jsx
 src/routes/**
