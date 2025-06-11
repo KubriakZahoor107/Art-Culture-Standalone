@@ -2,24 +2,40 @@ import ImageEditor from '@components/Blocks/ImageEditor.jsx'
 import TextAreaEditor from '@components/Blocks/TextAreaEditor'
 import TextEditor from '@components/Blocks/TextEditor'
 import styles from '@styles/components/VerificationPage/LoginPage.module.scss'
-import { useCallback, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../../Context/AuthContext.jsx'
 import API from '../../../utils/api.js'
 import MuseumAddressSearch from '../Blocks/MuseumAddressSearch.jsx'
 
+interface SignUpDetails {
+    email: string
+    password: string
+    role: string
+    title: string
+    bio: string
+    profileImage: File | null
+    country: string
+    state: string
+    city: string
+    street: string
+    house_number: string
+    postcode: string
+    lat: string
+    lon: string
+}
+
 const SignUp = () => {
-	const { t } = useTranslation()
-	const [signUpDetails, setSignUpDetails] = useState({
+        const { t } = useTranslation()
+        const [signUpDetails, setSignUpDetails] = useState<SignUpDetails>({
 		email: '',
 		password: '',
 		role: 'USER',
 		title: '',
 		bio: '',
-		profileImage: null,
-		// Address fields
-		country: '',
+                profileImage: null,
+                country: '',
 		state: '',
 		city: '',
 		street: '',
@@ -32,16 +48,16 @@ const SignUp = () => {
 	const { login } = useAuth() // Utilize login from AuthContext
 	const navigate = useNavigate()
 	const [passwordVisible, setPasswordVisible] = useState(false)
-	const isMuseum = signUpDetails.role === 'MUSEUM'
-	const isExhibition = signUpDetails.role === 'EXHIBITION'
-	const textEditorOnChange = ({ name, value }) => {
+        const isMuseum = signUpDetails.role === 'MUSEUM'
+        const isExhibition = signUpDetails.role === 'EXHIBITION'
+        const textEditorOnChange = ({ name, value }: { name: keyof SignUpDetails; value: string | File }) => {
 		setSignUpDetails((prev) => ({
 			...prev,
 			[name]: value,
 		}))
 	}
 
-	const handleChange = (e) => {
+        const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value, files } = e.target
 		if (name === 'profileImage') {
 			setSignUpDetails((prev) => ({
@@ -56,8 +72,17 @@ const SignUp = () => {
 		}
 	}
 
-	const handleAddressSelect = useCallback(
-		({ country, state, city, road, house_number, postcode, lat, lon }) => {
+        const handleAddressSelect = useCallback(
+                ({ country, state, city, road, house_number, postcode, lat, lon }: {
+                        country: string
+                        state: string
+                        city: string
+                        road: string
+                        house_number: string
+                        postcode: string
+                        lat: string
+                        lon: string
+                }) => {
 			setSignUpDetails((prev) => ({
 				...prev,
 				country,
@@ -73,7 +98,7 @@ const SignUp = () => {
 		[],
 	)
 
-	const handleSubmit = async (e) => {
+        const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
 		setServerMessage('')
 
@@ -84,12 +109,11 @@ const SignUp = () => {
 		formData.append('role', signUpDetails.role)
 		formData.append('title', signUpDetails.title)
 		formData.append('bio', signUpDetails.bio)
-		if (signUpDetails.profileImage) {
-			formData.append('profileImage', signUpDetails.profileImage[0])
-		}
+                if (signUpDetails.profileImage) {
+                        formData.append('profileImage', signUpDetails.profileImage)
+                }
 
-		// If role is MUSEUM, append address fields
-		if (signUpDetails.role === 'MUSEUM') {
+                if (signUpDetails.role === 'MUSEUM') {
 			formData.append('country', signUpDetails.country)
 			formData.append('city', signUpDetails.city)
 			formData.append('street', signUpDetails.street)
@@ -99,9 +123,6 @@ const SignUp = () => {
 			formData.append('lon', signUpDetails.lon)
 		}
 
-		// Log formData entries for debugging
-		for (let [key, value] of formData.entries()) {
-		}
 
 		try {
 			const response = await API.post(

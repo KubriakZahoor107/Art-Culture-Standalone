@@ -2,13 +2,13 @@
 
 This project uses **Next.js** for server-side rendering (SSR).
 
-This project requires **Node.js 18**. Run `nvm use` in the project
-directory to switch to this version. The `.nvmrc` file and the
+This project requires **Node.js 18**. After cloning, run `nvm use` in the
+project directory to switch to this version. The `.nvmrc` file and the
 `package.json` `engines` field enforce this requirement.
 
 ## Getting Started
 
-After switching to Node 18, install dependencies and create a local `.env` file based on `.env.sample`:
+After running `nvm use`, install dependencies and create a local `.env` file based on `.env.sample`:
 
 ```bash
 npm install
