@@ -1,37 +1,22 @@
 import type { Config } from 'jest'
 
 const config: Config = {
-    // Підключення ts-jest
-    preset: 'ts-jest',
-
-    // Емуляція середовища браузера для SSR (jsdom)
-    testEnvironment: 'jsdom',
-
-    // Setup files for custom matchers and other utilities
-    setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
-
-    // Мапінг псевдоніма @/
-    moduleNameMapper: {
-        '^@/(.*)$': '<rootDir>/src/$1',
-        '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-        '\\.(png|jpg|jpeg|gif|svg)$': '<rootDir>/__mocks__/fileMock.js',
-    },
-
-    // Які розширення обробляти
-    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-
-    // Як обробляти файли
-    transform: {
-        '^.+\\.(ts|tsx)$': 'ts-jest',
-        '^.+\\.mjs$': 'babel-jest',
-        '\\.[jt]sx?$': 'babel-jest',
-    },
-
-    // Які шляхи ігнорувати при тестах
-    testPathIgnorePatterns: ['/node_modules/', '/.next/', '/dist/'],
-
-    // Ігнорувати трансформацію цих модулів
-    transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  extensionsToTreatAsEsm: ['.ts', '.tsx', '.js', '.jsx'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(jpg|jpeg|png|svg|ttf|webp)$': '<rootDir>/__mocks__/fileMock.js',
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  transform: {
+    '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
+    '^.+\\.(js|jsx)$': 'babel-jest',
+  },
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/dist/'],
+  transformIgnorePatterns: ['/node_modules/(?!(some-esm-package)/)'],
 }
 
 export default config
