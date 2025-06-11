@@ -7,6 +7,9 @@ const config: Config = {
     // Емуляція середовища браузера для SSR (jsdom)
     testEnvironment: 'jsdom',
 
+    // Setup files for custom matchers and other utilities
+    setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
+
     // Мапінг псевдоніма @/
     moduleNameMapper: {
         '^@/(.*)$': '<rootDir>/src/$1',
