@@ -2,9 +2,10 @@
 
 import axios from 'axios'
 import { getBaseUrl } from './getBaseUrl'
+import { env } from '@/utils/env'
 
 // Resolve the base URL using getBaseUrl with a fallback to API_BASE_URL
-const resolvedBaseUrl = getBaseUrl() || process.env.API_BASE_URL || ''
+const resolvedBaseUrl = getBaseUrl() || env.API_BASE_URL || ''
 
 // Create an instance of axios with default configurations
 const API = axios.create({
@@ -22,7 +23,7 @@ API.interceptors.request.use(
                 if (typeof window !== 'undefined') {
                         token = localStorage.getItem('token')
                 } else {
-                        token = process.env.TOKEN
+                        token = env.TOKEN
                 }
                 if (token) {
                         config.headers.Authorization = `Bearer ${token}`
