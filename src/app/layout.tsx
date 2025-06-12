@@ -2,6 +2,7 @@
 
 import Script from 'next/script'
 import localFont from 'next/font/local'
+import { env } from '@/utils/env'
 
 const firaSans = localFont({
   src: [
@@ -29,7 +30,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID
+  const gaId = env.NEXT_PUBLIC_GA_ID
   const isProd = process.env.NODE_ENV === 'production'
 
   return (

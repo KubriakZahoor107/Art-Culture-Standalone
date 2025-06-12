@@ -2,7 +2,7 @@
 
 This project uses **Next.js** for server-side rendering (SSR).
 
-This project requires **Node.js 18**. After cloning, run `nvm use` in the
+This project requires **Node.js 20 LTS**. After cloning, run `nvm use` in the
 project directory to switch to this version. The `.nvmrc` file and the
 `package.json` `engines` field enforce this requirement.
 
@@ -22,29 +22,17 @@ npm install --legacy-peer-deps
 
 Tests rely on an up-to-date `package-lock.json`.
 
-This repository uses [Git LFS](https://git-lfs.com/) to store large
-binary assets. After cloning, make sure Git LFS is installed and pull
-the LFS objects:
-
-```bash
-git lfs install
-git lfs pull
-```
-
 
 ## Environment Variables
 
-Copy `.env.sample` to `.env` and update the values as needed.
-
-- `DATABASE_URL` – connection string for PostgreSQL
-- `REDIS_URL` or `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN`
-- `SHOPIFY_API_KEY` and `SHOPIFY_API_SECRET`
-- `NEXTAUTH_SECRET` and provider credentials like `GITHUB_ID`/`GITHUB_SECRET`
-- `NEXT_PUBLIC_HOST` – hostname used when rendering on the server
-- `NEXT_PUBLIC_API_BASE_URL` – base URL used by server components to fetch internal API routes. This must be set for production builds and defaults to `http://localhost:3000` during development. [`next.config.mjs`](next.config.mjs) checks for this variable and throws an error when it is missing.
-- `API_BASE_URL` - fallback base URL for server-side API utilities
-- `TOKEN` - access token for internal APIs
-- `NEXT_PUBLIC_API_URL` is no longer used and can be removed
+Copy `.env.sample` to `.env` and provide values for:
+- `NEXT_PUBLIC_API_BASE_URL` (required)
+- `API_BASE_URL` (optional)
+- `NEXTAUTH_SECRET`
+- `GITHUB_ID` and `GITHUB_SECRET`
+- `NEXT_PUBLIC_GA_ID` (optional)
+- `TOKEN` (optional)
+Environment variables are validated at runtime via [`src/utils/env.ts`](src/utils/env.ts).
 
 ### Environment
 
