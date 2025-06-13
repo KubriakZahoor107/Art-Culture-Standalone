@@ -1,4 +1,4 @@
-// src/utils/api.js
+// src/utils/api.ts
 
 import axios from 'axios'
 import { getBaseUrl } from './getBaseUrl'
@@ -15,6 +15,15 @@ const API = axios.create({
                 'Content-Type': 'application/json',
         },
 })
+
+export interface ApiResponse<T> {
+  data: T
+}
+
+export async function get<T>(url: string): Promise<ApiResponse<T>> {
+  const res = await API.get<T>(url)
+  return { data: res.data }
+}
 
 // Add a request interceptor to include the token in headers
 API.interceptors.request.use(

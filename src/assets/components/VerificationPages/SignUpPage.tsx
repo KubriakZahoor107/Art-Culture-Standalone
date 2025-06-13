@@ -1,13 +1,13 @@
-import ImageEditor from '@components/Blocks/ImageEditor.jsx'
+import ImageEditor from '@components/Blocks/ImageEditor'
 import TextAreaEditor from '@components/Blocks/TextAreaEditor'
 import TextEditor from '@components/Blocks/TextEditor'
 import styles from '@styles/components/VerificationPage/LoginPage.module.scss'
 import React, { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import useNavigate from '@/utils/navigation'
-import { useAuth } from '../../../Context/AuthContext.jsx'
-import API from '../../../utils/api.js'
-import MuseumAddressSearch from '../Blocks/MuseumAddressSearch.jsx'
+import { useAuth } from '../../../Context/AuthContext'
+import API from '../../../utils/api'
+import MuseumAddressSearch from '../Blocks/MuseumAddressSearch'
 
 interface SignUpDetails {
     email: string

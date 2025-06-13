@@ -1,4 +1,4 @@
-import { newsList } from "../data/news.js"
+import { newsList } from "../data/news"
 
 export async function getRandomNewsProps(context = {}) {
   const randomNews = newsList[Math.floor(Math.random() * newsList.length)]

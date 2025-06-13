@@ -65,6 +65,8 @@
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.0.0",
     "next-sitemap": "^4.2.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "@types/react-quill": "^2.0.8",
+    "@types/leaflet": "^1.9.7"
   }
 }
