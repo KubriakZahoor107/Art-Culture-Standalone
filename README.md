@@ -26,7 +26,7 @@ Tests rely on an up-to-date `package-lock.json`.
 ## Environment Variables
 
 Copy `.env.sample` to `.env` and provide values for:
-- `NEXT_PUBLIC_API_BASE_URL` (required)
+- `NEXT_PUBLIC_API_BASE_URL` (optional, defaults to `http://localhost:3000`)
 - `API_BASE_URL` (optional)
 - `NEXTAUTH_SECRET`
 - `GITHUB_ID` and `GITHUB_SECRET`
@@ -41,12 +41,16 @@ Ensure `.env.local` contains:
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
 ```
 before running `npm run build`. This variable defines the base URL used by server components to access internal API routes (see `.env.sample` for defaults).
-The build script fails if `NEXT_PUBLIC_API_BASE_URL` is not set because [`next.config.mjs`](next.config.mjs) enforces its presence.
+If `NEXT_PUBLIC_API_BASE_URL` is not set, the build falls back to `http://localhost:3000` and prints a warning.
 
 ## NextAuth
 
 Ensure the environment variables above are set. Start the development server and open `/api/auth/signin` to test authentication.
 
+
+## Routing
+Client components now rely on Next.js navigation hooks instead of React Router.
+Console debug and error output is disabled in production via `src/utils/logger.js`.
 ## Development
 
 Run the development server:

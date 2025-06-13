@@ -1,3 +1,4 @@
+import '@/utils/logger'
 import type { AppProps } from 'next/app'
 import { NextIntlClientProvider } from 'next-intl'
 

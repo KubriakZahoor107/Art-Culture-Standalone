@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react'
+import { debug, error } from '../utils/logger'
 import API from '../utils/api'
 
 const AuthContext = createContext()
@@ -22,11 +23,11 @@ export const AuthProvider = ({ children }) => {
 							Authorization: `Bearer ${token}`,
 						},
 					})
-					console.debug('User data fetched:', response.data.user)
+					debug('User data fetched:', response.data.user)
 					setUser(response.data.user)
 					setIsLoggedIn(true)
 				} catch (error) {
-					console.error('Failed to fetch user', error)
+					error('Failed to fetch user', error)
 					localStorage.removeItem('token')
 					setUser(null)
 					setIsLoggedIn(false)
@@ -41,7 +42,7 @@ export const AuthProvider = ({ children }) => {
 		setUser(userData)
 		setIsLoggedIn(true)
 		localStorage.setItem('token', token)
-		console.debug('User logged in:', userData)
+		debug('User logged in:', userData)
 	}
 
 	const logout = () => {

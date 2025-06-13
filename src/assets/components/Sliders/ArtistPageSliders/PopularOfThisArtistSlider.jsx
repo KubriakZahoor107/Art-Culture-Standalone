@@ -10,7 +10,7 @@ import { getBaseUrl } from '../../../../utils/getBaseUrl'
 // Import Swiper modules
 // import LikeAndShare from '@components/Blocks/LikeAndShare'
 import PropTypes from 'prop-types'
-import { useNavigate } from 'react-router-dom'
+import useNavigate from '@/utils/navigation'
 import { Navigation, Pagination } from 'swiper/modules'
 import '/src/styles/components/Sliders/ArtistPageSliders/PopularOfThisArtistSlider.scss'
 import Image from 'next/image'

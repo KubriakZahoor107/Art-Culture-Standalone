@@ -11,7 +11,7 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 // Import Swiper modules
-import { useNavigate } from 'react-router-dom'
+import useNavigate from '@/utils/navigation'
 import { Navigation, Pagination } from 'swiper/modules'
 
 import Image from 'next/image'
