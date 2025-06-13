@@ -2,7 +2,7 @@ import TextEditor from '@components/Blocks/TextEditor'
 import styles from '@styles/components/VerificationPage/LoginPage.module.scss'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useNavigate } from 'react-router-dom'
+import useNavigate from '@/utils/navigation'
 import { useAuth } from '../../../Context/AuthContext.jsx'
 import API from '../../../utils/api.js'
 

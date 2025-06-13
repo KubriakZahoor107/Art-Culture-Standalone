@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
-import { useNavigate } from 'react-router-dom'
+import useNavigate from '@/utils/navigation'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'

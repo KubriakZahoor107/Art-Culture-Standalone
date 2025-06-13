@@ -12,7 +12,7 @@ import 'swiper/css/pagination'
 import { Navigation, Pagination } from 'swiper/modules'
 
 import '@styles/components/Sliders/Base/NewsSlider.scss'
-import { useNavigate } from 'react-router-dom'
+import useNavigate from '@/utils/navigation'
 import { getBaseUrl } from '../../../../utils/getBaseUrl'
 import TranslatedContent from '../../Blocks/TranslatedContent'
 import Image from 'next/image'
