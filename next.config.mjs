@@ -3,7 +3,7 @@ import path from 'path';
 const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000';
 
 if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_API_BASE_URL) {
-  throw new Error('Missing NEXT_PUBLIC_API_BASE_URL for production build');
+  console.warn('NEXT_PUBLIC_API_BASE_URL is not defined, defaulting to http://localhost:3000');
 }
 
 /** @type {import('next').NextConfig} */
