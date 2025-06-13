@@ -1,10 +1,9 @@
-const nextJest = require('next/jest');
-const createJestConfig = nextJest({ dir: './' });
-
 /** @type {import('jest').Config} */
-const customConfig = {
+module.exports = {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@components/(.*)$': '<rootDir>/src/assets/components/$1',
@@ -12,6 +11,8 @@ const customConfig = {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(jpg|jpeg|png|svg|ttf|webp)$': '<rootDir>/__mocks__/fileMock.js',
   },
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest',
+  },
 };
-
-module.exports = createJestConfig(customConfig);

@@ -2,9 +2,9 @@ import '@/utils/logger'
 import type { AppProps } from 'next/app'
 import { NextIntlClientProvider } from 'next-intl'
 
-export default function App({ Component, pageProps }: AppProps<{ locale: string }>) {
+export default async function App({ Component, pageProps }: AppProps<{ locale: string }>) {
   const { locale = 'uk', ...rest } = pageProps
-  const messages = require(`../../messages/${locale}.json`)
+  const messages = (await import(`../../messages/${locale}.json`)).default as Record<string, string>
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       <Component {...rest} />

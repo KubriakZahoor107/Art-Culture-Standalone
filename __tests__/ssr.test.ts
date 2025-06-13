@@ -1,5 +1,5 @@
-import { getRandomNewsProps } from '../src/utils/serverProps.js'
-import { newsList } from '../src/data/news.js'
+import { getRandomNewsProps } from '../src/utils/serverProps'
+import { newsList } from '../src/data/news'
 
 test('getServerSideProps returns a news item and timestamp', async () => {
   const { props } = await getRandomNewsProps()

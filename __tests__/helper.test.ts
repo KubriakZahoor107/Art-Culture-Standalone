@@ -1,6 +1,6 @@
 /** @jest-environment node */
 import { jest } from '@jest/globals';
-import { getImageUrl, getFormattedDate, getFormattedTime } from '../src/utils/helper.js';
+import { getImageUrl, getFormattedDate, getFormattedTime } from '../src/utils/helper';
 import { getBaseUrl } from '../src/utils/getBaseUrl';
 
 describe('helper utilities', () => {

@@ -1,7 +1,7 @@
 import styles from '@styles/components/Blocks/Sidebar.module.scss'
 import { useTranslation } from 'react-i18next'
 import useNavigate from '@/utils/navigation'
-import { useAuth } from '../../../Context/AuthContext.jsx'
+import { useAuth } from '../../../Context/AuthContext'
 import { useUserRole } from '../../../utils/constants'
 
 function Sidebar() {
