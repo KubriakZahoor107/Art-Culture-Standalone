@@ -5,7 +5,7 @@ import './styles/index.scss'
 // Use a relative import so the module system works correctly when
 // this file is used outside of a Node.js environment with absolute
 // path resolution.
-import App from './assets/screens/home/Home.jsx'
+import App from './App.jsx'
 
 const container = document.getElementById('root')
 const root = createRoot(container)
