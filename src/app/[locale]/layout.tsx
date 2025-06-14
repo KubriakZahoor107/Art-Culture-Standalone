@@ -1,10 +1,9 @@
-import type { LayoutProps } from '@/types/layout'
+import type { LayoutProps } from 'next/app'
 
-export type LocaleLayoutProps = LayoutProps<{
-  locale: string
-}>
-
-export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
+export default function LocaleLayout({
+  children,
+  params,
+}: LayoutProps<{ locale: string }>) {
   return (
     <html lang={params.locale}>
       <body>{children}</body>
