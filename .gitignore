@@ -20,7 +20,7 @@ node_modules 2/
 
 # IDE та тестові артефакти
 __mocks__/
-jest.setup.js
+jest.setup.cjs
 fix-eslint.sh
 LICENSE 2
 Art-Culture-Backend/

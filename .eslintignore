@@ -1,6 +1,6 @@
 # Ignore generated entry files that don't require linting
-src/index.js
-src/App.jsx
+src/index.ts
+src/App.tsx
 src/routes/**
 src/pages/_app.tsx
-src/pages/ssr.js
+src/pages/ssr.tsx

@@ -9,7 +9,7 @@ module.exports = {
     '^@components/(.*)$': '<rootDir>/src/assets/components/$1',
     '^@styles/(.*)$': '<rootDir>/src/styles/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(jpg|jpeg|png|svg|ttf|webp)$': '<rootDir>/__mocks__/fileMock.js',
+    '\\.(jpg|jpeg|png|svg|ttf|webp)$': '<rootDir>/__mocks__/fileMock.ts',
   },
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',

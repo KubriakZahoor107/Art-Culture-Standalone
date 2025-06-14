@@ -1,4 +1,4 @@
-// TextAreaEditor.jsx
+// TextAreaEditor.tsx
 
 import styles from '@styles/components/Blocks/TextEditor.module.scss'
 import DOMPurify from 'dompurify' // Import DOMPurify for sanitization

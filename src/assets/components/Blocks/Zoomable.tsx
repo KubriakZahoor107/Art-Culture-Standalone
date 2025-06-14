@@ -1,4 +1,4 @@
-// ZoomableImage.jsx
+// ZoomableImage.tsx
 import style from '@styles/components/Blocks/Zoomable.module.scss'
 import PropTypes from 'prop-types'
 import React from 'react'

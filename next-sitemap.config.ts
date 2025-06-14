@@ -1,5 +1,6 @@
-/** @type {import('next-sitemap').IConfig} */
-const config = {
+import type { IConfig } from 'next-sitemap'
+
+const config: IConfig = {
   siteUrl: 'https://art.playukraine.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false,

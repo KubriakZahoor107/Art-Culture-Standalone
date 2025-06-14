@@ -1,4 +1,4 @@
-// src/components/LazyImage.jsx
+// src/components/LazyImage.tsx
 import React from 'react'
 import { useEffect, useRef, useState } from 'react'
 
