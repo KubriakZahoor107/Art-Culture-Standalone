@@ -25,23 +25,11 @@ Tests rely on an up-to-date `package-lock.json`.
 
 ## Environment Variables
 
-Copy `.env.sample` to `.env.local` (or `.env`) and provide values for:
-- `NEXT_PUBLIC_API_BASE_URL` (optional, defaults to `http://localhost:3000`)
-- `API_BASE_URL` (optional)
-- `NEXTAUTH_SECRET`
-- `GITHUB_ID` and `GITHUB_SECRET`
-- `NEXT_PUBLIC_GA_ID` (optional)
-- `TOKEN` (optional)
-Environment variables are validated at runtime via [`src/utils/env.ts`](src/utils/env.ts).
-
-### Environment
-
-Ensure `.env.local` contains:
+Створіть у корені `.env.local`:
 ```
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
 ```
-before running `npm run build`. This variable defines the base URL used by server components to access internal API routes (see `.env.sample` for defaults).
-If `NEXT_PUBLIC_API_BASE_URL` is not set, the build will now fail in production.
+Environment variables are validated at runtime via [`src/utils/env.ts`](src/utils/env.ts).
 
 ## NextAuth
 

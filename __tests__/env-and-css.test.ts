@@ -17,9 +17,9 @@ describe('getApiBaseUrl', () => {
     expect(getApiBaseUrl()).toBe('https://api.example.com')
   })
 
-  test('throws in production when NEXT_PUBLIC_API_BASE_URL is missing', () => {
+  test('falls back to localhost when NEXT_PUBLIC_API_BASE_URL is missing', () => {
     delete process.env.NEXT_PUBLIC_API_BASE_URL
     process.env.NODE_ENV = 'production'
-    expect(() => getApiBaseUrl()).toThrow()
+    expect(getApiBaseUrl()).toBe('http://localhost:3000')
   })
 })
