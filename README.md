@@ -25,7 +25,13 @@ Tests rely on an up-to-date `package-lock.json`.
 
 ## Environment Variables
 
-Copy `.env.sample` to `.env.local` (or `.env`) and provide values for:
+Create a `.env.local` file by copying `.env.sample`:
+
+```bash
+cp .env.sample .env.local
+```
+
+Then provide values for:
 - `NEXT_PUBLIC_API_BASE_URL` (optional, defaults to `http://localhost:3000`)
 - `API_BASE_URL` (optional)
 - `NEXTAUTH_SECRET`
