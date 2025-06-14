@@ -12,12 +12,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: 'npm'
-      - name: Use Node 18 via nvm
+      - name: Use Node 20 via nvm
         run: |
-          nvm install 18
-          nvm use 18
+          nvm install 20
+          nvm use 20
       - name: Cache node_modules
         uses: actions/cache@v3
         with:
