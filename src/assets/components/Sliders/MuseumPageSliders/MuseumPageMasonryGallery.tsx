@@ -1,4 +1,4 @@
-// ArtistPageMasonryGallery.jsx
+// ArtistPageMasonryGallery.tsx
 
 import style from '@styles/components/Sliders/MasonrySlider/PageMasonryGallery.module.scss'
 import { debounce } from 'lodash' // Using lodash's debounce
@@ -14,7 +14,7 @@ import {
 } from 'react'
 import { useTranslation } from 'react-i18next'
 import useNavigate, { useParams } from '@/utils/navigation'
-import TranslatedContent from '../../Blocks/TranslatedContent'
+import TranslatedContent from '../../Blocks/TranslatedContent.tsx'
 
 const MuseumPageMasonryGallery = ({ products, baseUrl, museum }) => {
 	if (!products || products.length === 0) {

@@ -1,4 +1,4 @@
-import { getBaseUrl } from './getBaseUrl'
+import { getBaseUrl } from './getBaseUrl.ts'
 
 /**
  * Gets normalized path to the image.

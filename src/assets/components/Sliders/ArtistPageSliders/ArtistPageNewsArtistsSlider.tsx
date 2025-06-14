@@ -13,8 +13,8 @@ import { Navigation, Pagination } from 'swiper/modules'
 
 import '@styles/components/Sliders/Base/NewsSlider.scss'
 import useNavigate from '@/utils/navigation'
-import { getBaseUrl } from '../../../../utils/getBaseUrl'
-import TranslatedContent from '../../Blocks/TranslatedContent'
+import { getBaseUrl } from '../../../../utils/getBaseUrl.ts'
+import TranslatedContent from '../../Blocks/TranslatedContent.tsx'
 import Image from 'next/image'
 
 const Slide = ({ post, baseUrl }) => {

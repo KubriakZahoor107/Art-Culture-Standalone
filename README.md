@@ -50,7 +50,7 @@ Ensure the environment variables above are set. Start the development server and
 
 ## Routing
 Client components now rely on Next.js navigation hooks instead of React Router.
-Console debug and error output is disabled in production via `src/utils/logger.js`.
+Console debug and error output is disabled in production via `src/utils/logger.ts`.
 ## Development
 
 Run the development server:
@@ -125,7 +125,7 @@ npm run test:debug
 
 ## SEO
 
-SEO metadata is defined in [`src/meta/index.js`](src/meta/index.js).
+SEO metadata is defined in [`src/meta/index.ts`](src/meta/index.ts).
 
 ## Middleware and SSR
 
@@ -138,7 +138,7 @@ URL. Requests without a locale prefix are redirected to `/uk` by default and an
 Pages are available in Ukrainian (`uk`) and English (`en`). These locales are
 pre-rendered at build time.
 
-A demo SSR page is available at [`src/pages/ssr.js`](src/pages/ssr.js) which uses `getServerSideProps` to select a random news item on each request.
+A demo SSR page is available at [`src/pages/ssr.tsx`](src/pages/ssr.tsx) which uses `getServerSideProps` to select a random news item on each request.
 
 ## Static Regeneration
 

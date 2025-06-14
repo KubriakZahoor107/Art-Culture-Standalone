@@ -13,9 +13,9 @@ import 'swiper/css/pagination'
 import '@styles/components/Sliders/Base/PopularSlider.scss'
 import useNavigate from '@/utils/navigation'
 import { Navigation, Pagination } from 'swiper/modules'
-import { getBaseUrl } from '../../../../utils/getBaseUrl'
-import { getImageUrl } from '../../../../utils/helper'
-import TranslatedContent from '../../Blocks/TranslatedContent'
+import { getBaseUrl } from '../../../../utils/getBaseUrl.ts'
+import { getImageUrl } from '../../../../utils/helper.ts'
+import TranslatedContent from '../../Blocks/TranslatedContent.tsx'
 import Image from 'next/image'
 
 const Slide = ({ post, baseUrl }) => {

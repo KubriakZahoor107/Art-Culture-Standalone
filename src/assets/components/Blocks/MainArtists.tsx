@@ -2,9 +2,9 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import useNavigate from '@/utils/navigation'
-import { useAuth } from '../../../Context/AuthContext'
-import { getFormattedDate, getImageUrl } from '../../../utils/helper'
-import TranslatedContent from './TranslatedContent'
+import { useAuth } from '../../../Context/AuthContext.tsx'
+import { getFormattedDate, getImageUrl } from '../../../utils/helper.ts'
+import TranslatedContent from './TranslatedContent.tsx'
 import styles from '/src/styles/components/Blocks/MainNews.module.scss' // Assuming you have a CSS module for styling
 
 function MainArtists() {

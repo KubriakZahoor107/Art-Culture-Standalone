@@ -13,8 +13,8 @@ import 'swiper/css/pagination'
 import { Navigation, Pagination } from 'swiper/modules'
 
 // import LikeAndShare from '@components/Blocks/LikeAndShare'
-import { getBaseUrl } from '../../../../utils/getBaseUrl'
-import TranslatedContent from '../../Blocks/TranslatedContent'
+import { getBaseUrl } from '../../../../utils/getBaseUrl.ts'
+import TranslatedContent from '../../Blocks/TranslatedContent.tsx'
 import '/src/styles/components/Sliders/Base/NewsSlider.scss'
 import Image from 'next/image'
 

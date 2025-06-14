@@ -5,9 +5,9 @@ import {
   useState,
   ReactNode,
 } from 'react'
-import { debug, error } from '../utils/logger'
-import API from '../utils/api'
-import { User } from '../types/user'
+import { debug, error } from '../utils/logger.ts'
+import API from '../utils/api.ts'
+import { User } from '../types/user.ts'
 
 interface AuthContextValue {
   user: User | null
@@ -44,11 +44,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 					debug('User data fetched:', response.data.user)
 					setUser(response.data.user)
 					setIsLoggedIn(true)
-				} catch (error) {
-					error('Failed to fetch user', error)
-					localStorage.removeItem('token')
-					setUser(null)
-					setIsLoggedIn(false)
+                                } catch (err) {
+                                        error('Failed to fetch user', err)
+                                        localStorage.removeItem('token')
+                                        setUser(null)
+                                        setIsLoggedIn(false)
 				}
 			}
 			setLoading(false)

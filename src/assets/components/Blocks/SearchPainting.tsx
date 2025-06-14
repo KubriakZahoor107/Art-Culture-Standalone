@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from '@styles/components/ExhibitionCard/ExhibitionCardCreate.module.scss';
-import API from '../../../utils/api';
+import API from '../../../utils/api.ts';
 
 function SearchPainting({ paintings, onChange }) {
 	const { t } = useTranslation()

@@ -13,7 +13,7 @@ import {
 } from 'react'
 import { useTranslation } from 'react-i18next'
 import useNavigate, { useParams } from '@/utils/navigation'
-import TranslatedContent from '../../Blocks/TranslatedContent'
+import TranslatedContent from '../../Blocks/TranslatedContent.tsx'
 
 const ExhibitionPageMasonryGallery = memo(
 	({ products, baseUrl, museum, creator }) => {

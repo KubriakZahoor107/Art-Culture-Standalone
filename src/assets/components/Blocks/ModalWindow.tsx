@@ -2,10 +2,10 @@ import style from '@styles/components/Blocks/ModalWindow.module.scss'
 import PropTypes from 'prop-types'
 import { useCallback, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useUserRole } from '../../../utils/constants'
-import { getImageUrl } from '../../../utils/helper'
-import TranslatedContent from '../Blocks/TranslatedContent'
-import LikeAndShare from './LikeAndShare'
+import { useUserRole } from '../../../utils/constants.tsx'
+import { getImageUrl } from '../../../utils/helper.ts'
+import TranslatedContent from '../Blocks/TranslatedContent.tsx'
+import LikeAndShare from './LikeAndShare.tsx'
 
 const GalleryModal = ({
 	isOpen,

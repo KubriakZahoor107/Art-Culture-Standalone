@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import useNavigate from '@/utils/navigation'
-import TranslatedContent from '../../Blocks/TranslatedContent'
+import TranslatedContent from '../../Blocks/TranslatedContent.tsx'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
@@ -10,8 +10,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Autoplay } from 'swiper/modules'
-import { getBaseUrl } from '../../../../utils/getBaseUrl'
-import { getImageUrl } from '../../../../utils/helper'
+import { getBaseUrl } from '../../../../utils/getBaseUrl.ts'
+import { getImageUrl } from '../../../../utils/helper.ts'
 
 import Image from 'next/image'
 

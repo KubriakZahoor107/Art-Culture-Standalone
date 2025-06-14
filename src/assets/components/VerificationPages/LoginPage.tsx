@@ -3,8 +3,8 @@ import styles from '@styles/components/VerificationPage/LoginPage.module.scss'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import useNavigate from '@/utils/navigation'
-import { useAuth } from '../../../Context/AuthContext'
-import API from '../../../utils/api'
+import { useAuth } from '../../../Context/AuthContext.tsx'
+import API from '../../../utils/api.ts'
 
 const Login = () => {
 	const { t } = useTranslation()

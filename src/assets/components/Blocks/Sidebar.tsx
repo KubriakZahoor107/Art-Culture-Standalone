@@ -1,8 +1,8 @@
 import styles from '@styles/components/Blocks/Sidebar.module.scss'
 import { useTranslation } from 'react-i18next'
 import useNavigate from '@/utils/navigation'
-import { useAuth } from '../../../Context/AuthContext'
-import { useUserRole } from '../../../utils/constants'
+import { useAuth } from '../../../Context/AuthContext.tsx'
+import { useUserRole } from '../../../utils/constants.tsx'
 
 function Sidebar() {
 	const { t } = useTranslation()
