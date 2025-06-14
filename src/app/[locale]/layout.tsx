@@ -1,4 +1,4 @@
-import type { LayoutProps } from 'next'
+import type { LayoutProps } from '@/types/layout'
 
 export default function LocaleLayout({
   children,
