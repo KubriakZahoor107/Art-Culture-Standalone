@@ -1,24 +1,9 @@
 // Файл: /src/app/layout.tsx
 
 import Script from 'next/script'
-import localFont from 'next/font/local'
 import { env } from '@/utils/env'
 
-const firaSans = localFont({
-  src: [
-    {
-      path: '../customFonts/FiraSans-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../customFonts/FiraSans-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  display: 'swap',
-})
+const FIRA_SANS_URL = '/customFonts/FiraSans-Regular.ttf'
 
 export const metadata = {
   title: 'Art Play Ukraine',
@@ -35,7 +20,26 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={firaSans.className}>
+      <head>
+        <link
+          rel="preload"
+          href={FIRA_SANS_URL}
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        <style>{`
+          @font-face {
+            font-family: 'Fira Sans';
+            src: url(${FIRA_SANS_URL}) format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+          }
+          body { font-family: 'Fira Sans', sans-serif; }
+        `}</style>
+      </head>
+      <body>
         {isProd && gaId && (
           <>
             <Script
