@@ -16,7 +16,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "Node16",
     "baseUrl": ".",
     "paths": {
       "@/*": [
