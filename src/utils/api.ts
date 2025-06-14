@@ -1,7 +1,7 @@
 // src/utils/api.ts
 
 import axios from 'axios'
-import { getBaseUrl } from './getBaseUrl'
+import { getBaseUrl } from './getBaseUrl.ts'
 import { env } from '@/utils/env'
 
 // Resolve the base URL using getBaseUrl with a fallback to API_BASE_URL

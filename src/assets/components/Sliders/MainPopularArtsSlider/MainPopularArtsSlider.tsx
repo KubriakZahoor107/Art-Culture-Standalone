@@ -15,7 +15,7 @@ import useNavigate from '@/utils/navigation'
 import { Navigation, Pagination } from 'swiper/modules'
 import { getBaseUrl } from '../../../../utils/getBaseUrl.ts'
 import { getImageUrl } from '../../../../utils/helper.ts'
-import ModalWindow from '../../Blocks/ModalWindow'
+import ModalWindow from '../../Blocks/ModalWindow.tsx'
 import TranslatedContent from '../../Blocks/TranslatedContent.tsx'
 import Image from 'next/image'
 

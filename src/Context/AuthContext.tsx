@@ -7,7 +7,7 @@ import {
 } from 'react'
 import { debug, error } from '../utils/logger.ts'
 import API from '../utils/api.ts'
-import { User } from '../types/user'
+import { User } from '../types/user.ts'
 
 interface AuthContextValue {
   user: User | null
