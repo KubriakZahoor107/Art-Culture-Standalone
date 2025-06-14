@@ -6,8 +6,11 @@ const __dirname = dirname(__filename);
 
 const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000';
 
-if (process.env.NODE_ENV === 'production' && !process.env.NEXT_PUBLIC_API_BASE_URL) {
-  throw new Error('NEXT_PUBLIC_API_BASE_URL must be defined in production');
+if (
+  process.env.NODE_ENV === 'production' &&
+  !process.env.NEXT_PUBLIC_API_BASE_URL
+) {
+  throw new Error('Missing NEXT_PUBLIC_API_BASE_URL');
 }
 
 /** @type {import('next').NextConfig} */
