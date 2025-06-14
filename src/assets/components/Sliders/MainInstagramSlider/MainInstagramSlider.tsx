@@ -1,4 +1,4 @@
-// Файл: /src/assets/components/Sliders/MainInstagramSlider/MainInstagramSlider.jsx
+// Файл: /src/assets/components/Sliders/MainInstagramSlider/MainInstagramSlider.tsx
 
 import axios from 'axios'
 import { useEffect, useState } from 'react'

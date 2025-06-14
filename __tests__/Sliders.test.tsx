@@ -1,7 +1,7 @@
 /** @jest-environment jsdom */
 import { render, fireEvent } from '@testing-library/react'
-import { Slide as ArtistSlide } from '../src/assets/components/Sliders/ArtistsPageSliders/ArtistsPageNewsArtistsSlider.jsx'
-import { Slide as ExhibitionSlide } from '../src/assets/components/Sliders/ExhibitionsPageSlider/ExhibitionsPageNewsSlider.jsx'
+import { Slide as ArtistSlide } from '../src/assets/components/Sliders/ArtistsPageSliders/ArtistsPageNewsArtistsSlider'
+import { Slide as ExhibitionSlide } from '../src/assets/components/Sliders/ExhibitionsPageSlider/ExhibitionsPageNewsSlider'
 import { useNavigate } from 'react-router-dom'
 
 jest.mock('react-router-dom', () => ({

@@ -1,4 +1,4 @@
-// ArtistPageMasonryGallery.jsx
+// ArtistPageMasonryGallery.tsx
 
 import style from '@styles/components/Sliders/MasonrySlider/PageMasonryGallery.module.scss'
 import { debounce } from 'lodash' // Using lodash's debounce
