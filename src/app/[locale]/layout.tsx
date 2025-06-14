@@ -1,9 +1,14 @@
-import type { LayoutProps } from 'next'
+import { ReactNode } from 'react'
+
+interface LocaleLayoutProps {
+  children: ReactNode
+  params: { locale: string }
+}
 
 export default function LocaleLayout({
   children,
   params,
-}: LayoutProps<{ locale: string }>) {
+}: LocaleLayoutProps) {
   return (
     <html lang={params.locale}>
       <body>{children}</body>
