@@ -17,8 +17,6 @@ if (
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // У Next.js 15+ appDir вже підтримується "з коробки"
-  appDir: true,
 
   webpack(config) {
     config.resolve.alias['@'] = resolve(__dirname, 'src');
