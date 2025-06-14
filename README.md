@@ -12,6 +12,7 @@ After running `nvm use`, install dependencies and create a local environment fil
 
 ```bash
 npm install
+cp .env.sample .env.local
 ```
 
 If you see peer dependency errors, try:

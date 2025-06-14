@@ -16,7 +16,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "Node16",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -47,6 +47,7 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/index.ts"
   ]
 }
