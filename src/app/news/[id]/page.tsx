@@ -1,7 +1,7 @@
 // src/app/news/[id]/page.tsx
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import type { PageProps } from 'next'
+import type { PageProps } from '@/types/layout'
 import createDOMPurify from 'dompurify'
 import { JSDOM } from 'jsdom'
 const window = new JSDOM('').window

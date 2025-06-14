@@ -43,6 +43,7 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
 ```
 before running `npm run build`. This variable defines the base URL used by server components to access internal API routes (see `.env.sample` for defaults).
 If `NEXT_PUBLIC_API_BASE_URL` is not set, the build will now fail in production.
+The error message will read `Missing NEXT_PUBLIC_API_BASE_URL`.
 
 ## NextAuth
 
