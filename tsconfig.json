@@ -19,9 +19,15 @@
     "module": "esnext",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/assets/components/*"],
-      "@styles/*": ["src/styles/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/assets/components/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ]
     },
     "typeRoots": [
       "./node_modules/@types",
