@@ -2,9 +2,10 @@
 
 This project uses **Next.js** for server-side rendering (SSR).
 
-This project requires **Node.js 18 LTS**. After cloning, run `nvm use` in the
-project directory to switch to this version. The `.nvmrc` file and the
-`package.json` `engines` field enforce this requirement.
+This project prefers **Node.js 18 LTS** but also supports Node.js 19 and 20.
+After cloning, run `nvm use` in the project directory to switch to the
+recommended version. The `.nvmrc` file sets Node 18 by default and the
+`package.json` `engines` field allows any Node.js version >=18 and <21.
 
 ## Getting Started
 
