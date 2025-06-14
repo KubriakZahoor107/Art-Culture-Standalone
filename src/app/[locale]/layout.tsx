@@ -1,11 +1,10 @@
-import { ReactNode } from 'react'
-
-interface LocaleLayoutProps {
-  children: ReactNode
+export default function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode
   params: { locale: string }
-}
-
-export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
+}) {
   return (
     <html lang={params.locale}>
       <body>{children}</body>
