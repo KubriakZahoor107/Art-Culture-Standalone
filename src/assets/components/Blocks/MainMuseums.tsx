@@ -6,8 +6,8 @@ import {
 	getFormattedDate,
 	getFormattedTime,
 	getImageUrl,
-} from '../../../utils/helper'
-import TranslatedContent from './TranslatedContent'
+} from '../../../utils/helper.ts'
+import TranslatedContent from './TranslatedContent.tsx'
 import styles from '/src/styles/components/Blocks/MainNews.module.scss'
 
 function MainMuseums() {

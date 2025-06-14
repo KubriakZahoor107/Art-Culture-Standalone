@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import TranslatedContent from '@components/Blocks/TranslatedContent'
+import TranslatedContent from '@components/Blocks/TranslatedContent.tsx'
 
 function Painting({ painting, metadata }) {
 	return (

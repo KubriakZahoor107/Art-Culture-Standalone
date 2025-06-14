@@ -5,9 +5,9 @@ import styles from '@styles/components/VerificationPage/LoginPage.module.scss'
 import React, { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import useNavigate from '@/utils/navigation'
-import { useAuth } from '../../../Context/AuthContext'
-import API from '../../../utils/api'
-import MuseumAddressSearch from '../Blocks/MuseumAddressSearch'
+import { useAuth } from '../../../Context/AuthContext.tsx'
+import API from '../../../utils/api.ts'
+import MuseumAddressSearch from '../Blocks/MuseumAddressSearch.tsx'
 
 interface SignUpDetails {
     email: string

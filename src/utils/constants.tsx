@@ -1,4 +1,4 @@
-import { useAuth } from '../Context/AuthContext'
+import { useAuth } from '../Context/AuthContext.tsx'
 
 /**
  * Custom hook that derives the role flags for the currently

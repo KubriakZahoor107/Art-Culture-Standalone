@@ -1,4 +1,4 @@
-import { getRandomNewsProps } from "../utils/serverProps"
+import { getRandomNewsProps } from "../utils/serverProps.ts"
 import { useTranslations } from 'next-intl'
 
 export const getServerSideProps = getRandomNewsProps

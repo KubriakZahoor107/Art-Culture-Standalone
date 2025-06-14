@@ -13,10 +13,10 @@ import 'swiper/css/pagination'
 import '@styles/components/Sliders/Base/PopularSlider.scss'
 import useNavigate from '@/utils/navigation'
 import { Navigation, Pagination } from 'swiper/modules'
-import { getBaseUrl } from '../../../../utils/getBaseUrl'
-import { getImageUrl } from '../../../../utils/helper'
+import { getBaseUrl } from '../../../../utils/getBaseUrl.ts'
+import { getImageUrl } from '../../../../utils/helper.ts'
 // import LikeAndShare from '../../Blocks/LikeAndShare'
-import TranslatedContent from '../../Blocks/TranslatedContent'
+import TranslatedContent from '../../Blocks/TranslatedContent.tsx'
 import Image from 'next/image'
 
 const Slide = ({ museum, baseUrl, onClick }) => {

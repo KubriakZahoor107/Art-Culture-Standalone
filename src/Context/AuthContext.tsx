@@ -5,8 +5,8 @@ import {
   useState,
   ReactNode,
 } from 'react'
-import { debug, error } from '../utils/logger'
-import API from '../utils/api'
+import { debug, error } from '../utils/logger.ts'
+import API from '../utils/api.ts'
 import { User } from '../types/user'
 
 interface AuthContextValue {

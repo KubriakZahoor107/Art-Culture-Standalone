@@ -14,8 +14,8 @@ import {
 } from 'react'
 import { useTranslation } from 'react-i18next'
 import useNavigate, { useParams } from '@/utils/navigation'
-import LikeAndShare from '../../Blocks/LikeAndShare'
-import TranslatedContent from '../../Blocks/TranslatedContent'
+import LikeAndShare from '../../Blocks/LikeAndShare.tsx'
+import TranslatedContent from '../../Blocks/TranslatedContent.tsx'
 
 const ArtistPageMasonryGallery = ({ products, baseUrl, creator, product }) => {
 	if (!products || products.length === 0) {
