@@ -1,5 +1,5 @@
 # Ignore generated entry files that don't require linting
-src/index.ts
+src/index.tsx
 src/App.tsx
 src/routes/**
 src/pages/_app.tsx
