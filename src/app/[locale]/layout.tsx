@@ -1,4 +1,4 @@
-import type { LayoutProps } from 'next/app'
+import type { LayoutProps } from 'next'
 
 export default function LocaleLayout({
   children,

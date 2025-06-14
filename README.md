@@ -8,7 +8,7 @@ project directory to switch to this version. The `.nvmrc` file and the
 
 ## Getting Started
 
-After running `nvm use`, install dependencies and create a local `.env` file based on `.env.sample`:
+After running `nvm use`, install dependencies and create a local environment file based on `.env.sample`:
 
 ```bash
 npm install
@@ -25,7 +25,7 @@ Tests rely on an up-to-date `package-lock.json`.
 
 ## Environment Variables
 
-Copy `.env.sample` to `.env` and provide values for:
+Copy `.env.sample` to `.env.local` (or `.env`) and provide values for:
 - `NEXT_PUBLIC_API_BASE_URL` (optional, defaults to `http://localhost:3000`)
 - `API_BASE_URL` (optional)
 - `NEXTAUTH_SECRET`
@@ -41,7 +41,7 @@ Ensure `.env.local` contains:
 NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
 ```
 before running `npm run build`. This variable defines the base URL used by server components to access internal API routes (see `.env.sample` for defaults).
-If `NEXT_PUBLIC_API_BASE_URL` is not set, the build falls back to `http://localhost:3000` and prints a warning.
+If `NEXT_PUBLIC_API_BASE_URL` is not set, the build will now fail in production.
 
 ## NextAuth
 
