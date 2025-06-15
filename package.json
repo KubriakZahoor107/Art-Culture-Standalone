@@ -13,7 +13,7 @@
     "lint": "next lint",
     "preview": "next preview",
     "test": "jest --config jest.config.cjs",
-    "sitemap": "next-sitemap",
+    "sitemap": "next-sitemap --config next-sitemap.config.ts",
     "test:watch": "jest --watch",
     "test:debug": "jest --runInBand --detectOpenHandles",
     "build:profile": "next build --profile"
