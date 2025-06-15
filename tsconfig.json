@@ -12,11 +12,11 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
-    "moduleResolution": "node16",
+    "moduleResolution": "nodenext",
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "nodenext",
     "baseUrl": ".",
     "paths": {
       "@/*": [
