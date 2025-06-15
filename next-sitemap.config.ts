@@ -12,7 +12,7 @@ const config = {
     lastmod: new Date().toISOString(),
   }),
   additionalPaths: async () => {
-    const { newsList } = await import('./src/data/news.js');
+    const { newsList } = await import('./src/data/news');
     const paths = [
       { loc: '/', changefreq: 'daily', priority: 1.0 },
       { loc: '/news', changefreq: 'weekly', priority: 0.7 },
