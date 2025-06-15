@@ -138,7 +138,6 @@ URL. Requests without a locale prefix are redirected to `/uk` by default and an
 Pages are available in Ukrainian (`uk`) and English (`en`). These locales are
 pre-rendered at build time.
 
-A demo SSR page is available at [`src/pages/ssr.js`](src/pages/ssr.js) which uses `getServerSideProps` to select a random news item on each request.
 
 ## Static Regeneration
 
