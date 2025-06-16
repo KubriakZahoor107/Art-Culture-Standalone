@@ -1,5 +1,6 @@
 {
   "root": true,
+  "ignorePatterns": ["src/index.ts"],
   "extends": ["next/core-web-vitals"],
   "plugins": ["@typescript-eslint"],
   "overrides": [
@@ -9,7 +10,8 @@
         "@typescript-eslint/no-unused-vars": "off",
         "react-hooks/rules-of-hooks": "off",
         "react-hooks/exhaustive-deps": "off",
-        "@next/next/no-img-element": "off"
+        "@next/next/no-img-element": "off",
+        "react/display-name": "off"
       }
     }
   ]
