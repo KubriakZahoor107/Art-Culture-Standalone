@@ -1,17 +1,22 @@
 "use client";
+import { useEffect } from 'react';
 
-import Link from 'next/link'
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) {
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
 
-export default function GlobalError() {
   return (
-    <html lang="uk">
-      <body style={{ padding: '2rem', fontFamily: 'system-ui, sans-serif' }}>
-        <h1>Щось пішло не так…</h1>
-        <p>
-          Спробуйте перезавантажити сторінку або перейдіть на{' '}
-          <Link href="/">головну</Link>.
-        </p>
-      </body>
-    </html>
-  )
+    <div style={{ padding: 20, textAlign: 'center' }}>
+      <h1>Щось пішло не так!</h1>
+      <p>{error.message}</p>
+      <button onClick={() => reset()}>Спробувати ще раз</button>
+    </div>
+  );
 }
