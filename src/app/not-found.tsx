@@ -1,3 +1,3 @@
 export default function NotFound() {
-  return <h1>404 – Сторінку не знайдено</h1>;
+  return <h1>Stage 0 CI stub: 404</h1>;
 }

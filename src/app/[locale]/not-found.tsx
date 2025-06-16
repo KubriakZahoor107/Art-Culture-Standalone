@@ -1,1 +1,3 @@
-export default function NotFound() { return <h1>Page not found.</h1> }
+export default function LocaleNotFound() {
+  return <h1>Stage 0 CI stub: Locale 404</h1>;
+}
