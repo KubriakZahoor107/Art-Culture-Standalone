@@ -5,7 +5,7 @@ import {
   useState,
   ReactNode,
 } from 'react'
-import { debug, error } from '../utils/logger.js'
+import { debug, error as logError } from '../utils/logger.js'
 import API from '../utils/api.js'
 import { User } from '../types/user.js'
 
@@ -45,7 +45,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 					setUser(response.data.user)
 					setIsLoggedIn(true)
 				} catch (error) {
-					error('Failed to fetch user', error)
+					logError('Failed to fetch user', error as Error)
 					localStorage.removeItem('token')
 					setUser(null)
 					setIsLoggedIn(false)
