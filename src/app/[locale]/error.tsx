@@ -1,2 +1,2 @@
 "use client";
-export { default } from '../error.js';
+export { default } from '../error.tsx';
