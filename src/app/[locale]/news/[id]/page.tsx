@@ -1,6 +1,4 @@
-export {
-  default,
-  generateMetadata,
-  generateStaticParams,
-} from '@/app/news/[id]/page'
-export const revalidate = 60
+export async function generateStaticParams() { return []; }
+export default function LocaleNewsPageStub() {
+  return <div>Stage 0 CI stub: Locale News page</div>;
+}

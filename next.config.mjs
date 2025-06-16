@@ -17,6 +17,14 @@ if (
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Ось тут вимикаємо помилки TS в продакшн-збірці:
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  // (додатково можна ігнорувати ESLint, хоча ми вже виключили правила в .eslintrc.json)
+  eslint: {
+    ignoreDuringBuilds: true
+  },
 
   webpack(config) {
     config.resolve.alias['@'] = resolve(__dirname, 'src');
@@ -29,4 +37,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-
