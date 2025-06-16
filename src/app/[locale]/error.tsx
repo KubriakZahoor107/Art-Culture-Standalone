@@ -1,5 +1,10 @@
 'use client';
-export default function Error({ error, reset }: { error: Error; reset: () => void }) {
-  console.error(error);
+
+interface ErrorProps {
+  error: Error;
+  reset: () => void;
+}
+
+export default function Error({ error, reset }: ErrorProps) {
   return <h1>Stage 0 CI stub: Locale Error</h1>;
 }
