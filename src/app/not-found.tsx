@@ -1,3 +1,4 @@
+// src/app/not-found.tsx
 export default function NotFound() {
-  return <h1>Stage 0 CI stub: Not Found</h1>;
+  return <h1>404 — Сторінку не знайдено</h1>
 }
