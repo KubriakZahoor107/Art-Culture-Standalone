@@ -24,3 +24,4 @@ jest.setup.js
 fix-eslint.sh
 LICENSE 2
 Art-Culture-Backend/
+.vercel
